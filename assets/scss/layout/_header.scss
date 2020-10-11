@@ -1,0 +1,304 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+  animation: showHeader 6s linear;
+  &__container {
+    width: 82.5%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &__hide {
+      display: none;
+    }
+
+    &__logo {
+      padding: 58px 0 17px 0;
+    }
+    &__nav {
+      width: 55.55556%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__menu {
+        display: none;
+      }
+
+      &__list {
+        display: flex;
+        text-decoration: none;
+        justify-content: space-between;
+        align-items: center;
+        width: 74%;
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style: none;
+          color: white;
+          padding: 58px 0 17px 0;
+          a {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+          }
+        }
+        &--active {
+          border-top: 1px solid $color-main-1;
+          a {
+            color: $color-main-1;
+          }
+        }
+      }
+      &__reservation {
+        padding: 58px 0 17px 0;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          background-color: rgba(0, 0, 0, 0);
+          border: 1px solid white;
+          border-radius: 4px;
+          padding: 12px 28px;
+          color: white;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    @include respon(ipadPro) {
+      &__nav {
+        width: 70%;
+      }
+    }
+    @include respon(ipad) {
+      &__menu-hide {
+        opacity: 0;
+        animation: hideMenu 0.5s linear;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+      }
+
+      &__menu-reponsive {
+        animation: showMenu 0.5s linear;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+
+        &__list {
+          display: flex;
+          text-decoration: none;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style: none;
+            color: white;
+            a {
+              font-size: 1.6rem;
+              text-transform: uppercase;
+            }
+          }
+          &--active {
+            border-top: 1px solid $color-main-1;
+            a {
+              color: $color-main-1;
+            }
+          }
+        }
+      }
+      &__nav {
+        justify-content: flex-end;
+        &__menu {
+          padding: 58px 0 17px 0;
+          display: flex;
+          justify-content: space-between;
+          margin-left: 10px;
+          img {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid $color-main-1;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+        &__list {
+          display: none;
+        }
+      }
+    }
+    @include respon(iphone) {
+      width: 100%;
+      &__menu-hide {
+        opacity: 0;
+        animation: hideMenuMobile 0.5s linear;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        height: 0;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+      }
+      &__menu-reponsive {
+        animation: showMenuMobile 0.5s linear;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        height: 180px;
+        overflow: hidden;
+        padding: 10px;
+        &__list {
+          display: flex;
+          text-decoration: none;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style: none;
+            color: white;
+            a {
+              font-size: 16px;
+              text-transform: uppercase;
+            }
+          }
+          &--active {
+            border-top: 1px solid $color-main-1;
+            a {
+              color: $color-main-1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header-scroll-show {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  animation: showScrollHeader 0.5s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+}
+.header-scroll-hide {
+  background-color: rgba(0, 0, 0, 0);
+  animation: hideScrollHeader 0.5s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+}
+@keyframes showMenu {
+  0% {
+    opacity: 0;
+
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 30%;
+  }
+}
+@keyframes hideMenu {
+  0% {
+    opacity: 1;
+    height: 30%;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@keyframes showMenuMobile {
+  0% {
+    opacity: 0;
+
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 180px;
+  }
+}
+@keyframes hideMenuMobile {
+  0% {
+    opacity: 1;
+    height: 180px;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@keyframes showHeader {
+  0% {
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 1);
+  }
+  50% {
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 1);
+  }
+  70% {
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 1);
+  }
+  100% {
+    transform: translateY(0%);
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@keyframes showScrollHeader {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes hideScrollHeader {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0);
+  }
+}

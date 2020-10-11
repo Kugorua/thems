@@ -1,0 +1,170 @@
+.customerStore {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 70px 0;
+  margin: 120px 0;
+  &__container {
+    width: 40.8%;
+    margin: 0 auto;
+    position: relative;
+    &__slider {
+      .slider {
+        &__container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          position: relative;
+          &__hover {
+            img {
+              animation: showCustomer 0.8s linear;
+            }
+            p {
+              animation: showCustomer 0.8s linear;
+            }
+          }
+          &__infor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            p {
+              margin: 0;
+              margin-top: 20px;
+              text-align: center;
+              color: white;
+            }
+            &__name {
+              font-size: 2.2rem;
+            }
+          }
+          &__item {
+            width: 50%;
+            height: 65%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+    &__dots {
+      width: 20%;
+      position: absolute;
+      left: 50%;
+      bottom: 15px;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      z-index: 20;
+      padding: 0;
+      margin: 0;
+      &__item {
+        width: 10px;
+        height: 10px;
+        background-color: #353c42;
+        border-radius: 50%;
+        cursor: pointer;
+        span {
+          display: none;
+        }
+      }
+      &__active {
+        width: 16px;
+        height: 16px;
+        background-color: #0f1920;
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: white;
+          border-radius: 50%;
+        }
+      }
+    }
+    &__title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: white;
+      }
+      h2 {
+        font-size: 4.8rem;
+        font-weight: 500;
+        color: white;
+      }
+      &__line {
+        width: 50px;
+        height: 2px;
+        background-color: #cc922e;
+        margin-bottom: 20px;
+      }
+    }
+    @include respon(iphone) {
+      width: 80%;
+      &__title {
+        p {
+          text-transform: uppercase;
+          font-weight: 500;
+          margin: 16px 0;
+        }
+        h2 {
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+      .slider {
+        &__container {
+          &__hover {
+            img {
+              animation: showCustomer 0.8s linear;
+            }
+            p {
+              animation: showCustomer 0.8s linear;
+            }
+          }
+          &__infor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%, -50%);
+            z-index: 20;
+            p {
+              margin: 0;
+              margin-top: 0px;
+              font-size: 1rem;
+              text-align: center;
+              color: white;
+            }
+            &__name {
+              font-size: 2.2rem;
+            }
+          }
+          &__item {
+            width: 100%;
+            height: 50%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+  }
+}

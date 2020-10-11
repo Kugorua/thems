@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #00c58e;
+}
+html {
+  font-size: 62.5%;
+  @media screen and (max-width: 768px) {
+    font-size: 42.5%;
+  }
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  margin: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+}

@@ -1,0 +1,18 @@
+$breakpoints: (
+  ipadPro: 1024px,
+  ipad: 768px,
+  iphone: 414px
+);
+@mixin respon($breakpoint) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $breakpoint
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "`{$breakpoint}`";
+  }
+}

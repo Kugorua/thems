@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <defs>
+    <path d="M0 0L24 0L24 24L0 24L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="facebook-square" transform="translate(0.5 0.5)" opacity="0.32">
+    <path d="M0 0L24 0L24 24L0 24L0 0Z" id="Mask" fill="none" fill-rule="evenodd" stroke="#979797" stroke-opacity="0.011764706" stroke-width="1" />
+    <g clip-path="url(#mask_1)">
+      <g id="facebook-square" transform="translate(1 1)">
+        <path d="M22 2.35714L22 19.6429C22 20.9442 20.9442 22 19.6429 22L15.454 22L15.454 13.2982L18.4299 13.2982L18.8571 9.97857L15.454 9.97857L15.454 7.85714C15.454 6.89464 15.7192 6.24152 17.0991 6.24152L18.8571 6.24152L18.8571 3.27545C18.5527 3.23616 17.5116 3.14286 16.2938 3.14286C13.7598 3.14286 12.0214 4.68973 12.0214 7.53304L12.0214 9.98348L9.03571 9.98348L9.03571 13.3031L12.0263 13.3031L12.0263 22L2.35714 22C1.0558 22 0 20.9442 0 19.6429L0 2.35714C0 1.0558 1.0558 0 2.35714 0L19.6429 0C20.9442 0 22 1.0558 22 2.35714Z" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+      </g>
+    </g>
+  </g>
+</svg>
