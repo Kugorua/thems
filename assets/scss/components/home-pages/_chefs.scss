@@ -130,7 +130,11 @@
         }
       }
     }
+    @media screen and (max-width: 1200px) {
+      width: 78%;
+    }
     @include respon(ipad) {
+      width: 50%;
       &__title {
         h2 {
           text-align: center;
@@ -144,13 +148,20 @@
         .slider {
           .slider__items {
             .slider__container {
-              margin: 2px;
+              &__img {
+                filter: grayscale(0%);
+              }
             }
+          }
+          .active-chefs {
+            box-shadow: none;
+            animation: none;
           }
         }
       }
     }
     @include respon(iphone) {
+      width: 80%;
       &__title {
         &__line {
           margin-bottom: 10px;

@@ -76,7 +76,7 @@ export default {
         itemsToSlide: 1,
         centerMode: true,
         wheelControl: false,
-        autoPlay: true,
+        // autoPlay: true,
         hoverPause: false,
         playSpeed: 10000,
         transition: 400,

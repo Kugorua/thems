@@ -23,7 +23,7 @@
         <hooper
           ref="carousel"
           :settings="hooperSettings"
-          style="height: 400px; outline: none"
+          style="height: auto; outline: none"
           @slide="updateCarousel"
         >
           <slide

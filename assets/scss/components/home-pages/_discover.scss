@@ -58,6 +58,11 @@
       animation: showInfor 1s linear;
       opacity: 1;
     }
+    @media screen and (max-width: 1300px) {
+      &__infor {
+        padding: 20px;
+      }
+    }
     @include respon(ipadPro) {
       &__img {
         width: 100%;
@@ -107,6 +112,14 @@
         border-radius: 10px;
       }
     }
+    @media screen and (max-width: 515px) {
+      &__infor {
+        p {
+          font-size: 1.6rem;
+          margin: 10px 0;
+        }
+      }
+    }
     @include respon(iphone) {
       &__img {
         width: 100%;
@@ -139,6 +152,17 @@
             border: 0.5px solid black;
             font-size: 1.6rem;
           }
+        }
+      }
+    }
+    @media screen and (max-width: 330px) {
+      &__infor {
+        padding: 5px 2px;
+        &__line {
+          border: 1px solid $color-main-1;
+          width: 50px;
+          background-color: $color-main-1;
+          margin-bottom: 5px;
         }
       }
     }

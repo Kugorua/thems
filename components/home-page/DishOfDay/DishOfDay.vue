@@ -42,7 +42,8 @@
         <hooper
           ref="carousel"
           :settings="hooperSettings"
-          style="height: 350px; outline: none"
+          style="height: auto; outline: none;"
+          :class="{'hooper-responsive':true}"
           @slide="updateCarousel"
         >
           <slide class="slider">

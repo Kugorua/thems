@@ -10,7 +10,8 @@
   >
     <div class="header__container">
       <div class="header__container__logo">
-        <img :src="imgLogoHeader" alt="logo header" />
+        
+         <n-link :to="`/`"><img :src="imgLogoHeader" alt="logo header" /></n-link>
       </div>
       <div class="header__container__nav">
         <ul class="header__container__nav__list">

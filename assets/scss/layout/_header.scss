@@ -69,12 +69,17 @@
         }
       }
     }
-    @include respon(ipadPro) {
+    @include respon(pc_1344) {
       &__nav {
-        width: 70%;
+        width: 75%;
       }
     }
-    @include respon(ipad) {
+    // @include respon(ipadPro) {
+    //   &__nav {
+    //     width: 70%;
+    //   }
+    // }
+    @include respon(ipadPro) {
       &__menu-hide {
         opacity: 0;
         animation: hideMenu 0.5s linear;

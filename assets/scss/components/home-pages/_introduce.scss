@@ -96,7 +96,13 @@
       opacity: 1;
     }
   }
-  @include respon(ipad) {
+  @include respon(pc_1344) {
+    margin: 60px 0;
+    &__container {
+      width: 82.5%;
+    }
+  }
+  @include respon(ipadPro) {
     margin: 60px 0;
     &__container {
       flex-wrap: wrap;
